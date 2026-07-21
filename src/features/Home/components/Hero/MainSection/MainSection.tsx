@@ -4,13 +4,13 @@ import topRightArrow from '@/assets/images/topRighArrow.svg'
 const MainSection = () => {
     return (
         <div className="w-full relative overflow-hidden">
-            <div className="w-full flex justify-center relative z-[100] border-b border-white-100 ">
+            <div className="w-full flex justify-center relative z-[100] border-b border-white border-[64%] ">
                 <img className="absolute w-[64px] h-[89px] left-[65%] bottom-[-44px] z-[600]" src={longStar} alt="" />
-                <div className="w-[89.5%] relative font-syne font-extrabold text-white">
-                    <div className="w-[70%] flex flex-col translate-y-22">
+                <div className="w-[89.5%] h-full relative font-syne font-extrabold text-white">
+                    <div className="w-[70%] flex flex-col pt-[88px]">
                         <h1 className="text-[135px] self-start">Fresh</h1>
                         <h1 className="text-[135px] self-end pr-5 text-transparent leading-[0.18] [-webkit-text-stroke:2px_white]">2026</h1>
-                        <h1 className="text-[135px] translate-x-27">Look</h1>
+                        <h1 className="text-[135px] ml-[11.5%]">Look</h1>
                     </div>
                     <div className="absolute right-0 bottom-5 font-workSans font-normal text-sm text-[#161615]">
                         <p>OREGON JACKET</p>
