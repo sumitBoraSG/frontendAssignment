@@ -32,6 +32,12 @@
   font-style: normal;
 
 }
+@font-face {
+  font-family: 'Syne';
+  src: url("./assets/fonts/Syne/Syne-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
 @theme {
   --font-poppins: 'Poppins',sans-serif;
   --font-workSans: 'Work_Sans', sans-serif;

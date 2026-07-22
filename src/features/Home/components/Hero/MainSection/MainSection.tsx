@@ -4,30 +4,36 @@ import topRightArrow from '@/assets/images/topRighArrow.svg'
 const MainSection = () => {
     return (
         <div className="w-full relative overflow-hidden">
-            <div className="w-full flex justify-center relative z-[100] border-b border-white border-[64%] ">
-                <img className="absolute w-[64px] h-[89px] left-[65%] bottom-[-44px] z-[600]" src={longStar} alt="" />
+            <div className="w-full flex justify-center relative z-[100] after:content-['']
+    after:absolute
+    after:bottom-0
+    after:left-0
+    after:w-[64.5%]
+    after:border-b
+    after:border-white max-[400px]:h-[502px] max-[400px]:after:w-[42%]">
+                <img className="absolute w-[64px] h-[89px] left-[65.2%] bottom-[-44px] z-[600] max-[400px]:left-[40%] max-[400px]:w-[47px] max-[400px]:h-[82px] max-[400px]:bottom-[-41px]" src={longStar} alt="" />
                 <div className="w-[89.5%] h-full relative font-syne font-extrabold text-white">
-                    <div className="w-[70%] flex flex-col pt-[88px]">
-                        <h1 className="text-[135px] self-start">Fresh</h1>
-                        <h1 className="text-[135px] self-end pr-5 text-transparent leading-[0.18] [-webkit-text-stroke:2px_white]">2026</h1>
-                        <h1 className="text-[135px] ml-[11.5%]">Look</h1>
+                    <div className="w-[70%] flex flex-col pt-[95px] max-[400px]:pt-[300px] max-[400px]:w-[95%]">
+                        <h1 className="text-[135px] self-start max-[806px]:text-[100px] max-[400px]:text-[55px]">Fresh</h1>
+                        <h1 className="text-[135px] self-end pr-5 text-transparent leading-[0.18] [-webkit-text-stroke:2px_white] max-[806px]:text-[100px] max-[400px]:text-[55px] max-[400px]:leading-[0.40]">2026</h1>
+                        <h1 className="text-[135px] ml-[11.5%] max-[806px]:text-[100px] max-[400px]:text-[55px] max-[400px]:ml-[7%]">Look</h1>
                     </div>
-                    <div className="absolute right-0 bottom-5 font-workSans font-normal text-sm text-[#161615]">
+                    <div className="absolute right-0 bottom-3.5 font-workSans font-normal text-sm text-[#161615]">
                         <p>OREGON JACKET</p>
                         <p>$124</p>
                     </div>
                 </div>
             </div>
             <div className="w-full flex justify-center h-[120px]">
-                <div className="w-[89.5%] relative font-syne font-extrabold text-white">
-                    <div className="inline-block relative z-[100] font-workSans font-normal text-[18px] border-b border-white mt-[29px]">
-                        <p className='whitespace-nowrap'>See more<img src={topRightArrow} alt=""/></p>
+                <div className="w-[89.5%] relative font-extrabold text-white pt-[1px]">
+                    <div className="inline-block relative z-[100] font-workSans font-normal text-[19px] border-b border-white mt-[29px]">
+                        <p className='leading-[1.2] font-workSans font-400 flex gap-2.5 max-[400px]:mt-[18px]'><p>See more</p> <img src={topRightArrow} alt=""/></p>
                     </div>
                 </div>
             </div>
-            <img className="absolute w-[478px] top-[-1.5%] left-[59%] z-[50] object-cover" src={personStar} alt=""/>
-            <div className="absolute right-0 top-[210px] w-[1051px] h-[350px] bg-orange-500 z-[60] opacity-[0.19]"></div>
-            <div className="absolute right-0 top-[210px] w-[1051px] h-[350px] bg-[#F07E15] z-10"></div>
+            <img className="absolute w-[478px] top-[-1%] left-[59%] z-[50] object-cover max-[400px]:left-[26%] max-[400px]:h-[600px] max-[400px]:top-[20px]" src={personStar} alt=""/>
+            <div className="absolute right-0 top-[203px] w-[1051px] h-[354px] bg-orange-500 z-[60] opacity-[0.19] max-[400px]:top-[208px] max-[400px]:h-[325px]"></div>
+            <div className="absolute right-0 top-[203px] w-[1051px] h-[354px] bg-[#F07E15] z-10 max-[400px]:top-[208px] max-[400px]:h-[325px]"></div>
         </div>
     )
 }
