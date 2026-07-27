@@ -3,7 +3,7 @@ import arrowRight from '@/assets/images/arrowRight.svg';
 import starIcon from "@/assets/images/blackStar.svg";
 
 
-const ProductHeader = () => {
+const ProductHeader = ({scrollLeft, scrollRight}) => {
     return (
         <div className="w-full flex justify-center">
             <div className="w-[89.5%] pt-[73px] flex justify-between max-sm:pt-[49px] max-md:border-b max-md:border-black">
@@ -12,8 +12,8 @@ const ProductHeader = () => {
                     <img className='absolute w-[23px] h-[22px] bottom-[-12px]' src={starIcon} alt="star icon" />
                 </div>
                 <div className='flex gap-[48px] pt-[22px] max-md:hidden'>
-                    <img className='w-[55px]' src={arrowLeft} alt="left arrow" />
-                    <img className='w-[55px]' src={arrowRight} alt="right arrow" />
+                    <img className='w-[55px]' onClick={scrollLeft} src={arrowLeft} alt="left arrow" />
+                    <img className='w-[55px]' onClick={scrollRight} src={arrowRight} alt="right arrow" />
                 </div>
             </div>
         </div>

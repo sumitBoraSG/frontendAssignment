@@ -1,20 +1,21 @@
 import personPhoto from '@/assets/images/card1Photo.png'
 import viewCard from '@/assets/images/viewCard.svg'
-const ProductCard = () => {
+const ProductCard = ({title, price, image, description}) => {
+    console.log(title, description, price);
     return (
         <div className="w-[310px] shrink-0">
-            <div className="w-full h-[322px] relative">
-                <img className='h-[100%] w-[100%] object-fit:cover' src={personPhoto} alt="" />
+            <div className="w-full relative">
+                <img className='h-[322px] w-full' src={image} alt="" />
                 <img className='absolute bottom-[0%] right-[-5%] h-[45px] w-[45px]' src={viewCard} alt="" />
             </div>
             <div className='max-sm:ml-[20px] max-sm:mt-[10px]'>
-                <h1 className='font-syne font-[600] text-[26px] pt-[6px] max-md:pt-[2px]'>FLORIDA JACKET</h1>
+                <h1 className='font-syne font-[600] text-[26px] pt-[6px] max-md:pt-[2px]'>{title}</h1>
                 <div>
                     <p className='font-workSans text-[14px] text-[#16161580] max-md:leading-[1.2]'>
-                        Suffered alteration in some form, bysuffalterattion in some forme, byinjected humor, or randomised
+                        {description}
                     </p>
                 </div>
-                <p className='font-syne font-[600] text-[26px]'>$ 100</p>
+                <p className='font-syne font-[600] text-[26px]'>$ {price}</p>
             </div>
         </div>
     )
