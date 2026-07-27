@@ -1,18 +1,16 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import Home from './features/Home/Home.tsx'
-import Products from './features/Products/Products.tsx'
-import Footer from './features/Footer/Footer.tsx'
+import Home from './features/Home/Home'
+import NotFoundPage from './features/NotFoundPage/NotFoundPage'
 import './App.css'
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
-  return <>
-  <Home />
-  <Products />
-  <Footer />
-  </>
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  )
 }
 
 export default App;

@@ -7,10 +7,10 @@ const ProductCard = () => {
                 <img className='h-[100%] w-[100%] object-fit:cover' src={personPhoto} alt="" />
                 <img className='absolute bottom-[0%] right-[-5%] h-[45px] w-[45px]' src={viewCard} alt="" />
             </div>
-            <div className='max-[400px]:ml-[20px] max-[400px]:mt-[10px]'>
-                <h1 className='font-syne font-[600] text-[26px]'>FLORIDA JACKET</h1>
+            <div className='max-sm:ml-[20px] max-sm:mt-[10px]'>
+                <h1 className='font-syne font-[600] text-[26px] pt-[6px] max-md:pt-[2px]'>FLORIDA JACKET</h1>
                 <div>
-                    <p className='font-workSans text-[14px] text-[#16161580]'>
+                    <p className='font-workSans text-[14px] text-[#16161580] max-md:leading-[1.2]'>
                         Suffered alteration in some form, bysuffalterattion in some forme, byinjected humor, or randomised
                     </p>
                 </div>

@@ -6,12 +6,12 @@ import starIcon from "@/assets/images/blackStar.svg";
 const ProductHeader = () => {
     return (
         <div className="w-full flex justify-center">
-            <div className="w-[89.5%] pt-[78px] flex justify-between max-[400px]:pt-[40px] ">
-                <div className='border-b border-black relative'>
-                    <h2 className='font-syne font-600 leading-[1.1] text-[90px] max-[400px]:text-[40px] max-[400px]:leading-[1.26] max-[1000px]:text-[60px]'>New products</h2>
+            <div className="w-[89.5%] pt-[73px] flex justify-between max-sm:pt-[49px] max-md:border-b max-md:border-black">
+                <div className='border-b border-black relative max-md:border-0'>
+                    <h2 className='font-syne font-600 leading-[1.1] text-[90px] max-sm:text-[40px] max-sm:leading-[1.26] max-lg:text-[60px]'>New products</h2>
                     <img className='absolute w-[23px] h-[22px] bottom-[-12px]' src={starIcon} alt="star icon" />
                 </div>
-                <div className='flex gap-[48px] pt-[22px] max-[750px]:hidden'>
+                <div className='flex gap-[48px] pt-[22px] max-md:hidden'>
                     <img className='w-[55px]' src={arrowLeft} alt="left arrow" />
                     <img className='w-[55px]' src={arrowRight} alt="right arrow" />
                 </div>
