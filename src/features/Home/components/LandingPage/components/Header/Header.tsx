@@ -3,6 +3,8 @@ import facebookIcon from '@/assets/images/facebook.svg'
 import linkedinIcon from '@/assets/images/linkedin.svg'
 import twitterIcon from '@/assets/images/twitter.svg'
 import instagramIcon from '@/assets/images/insta.svg'
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <div className="w-full bg-[#1A1A1A] flex justify-center h-[42px] font-poppins font-normal">
@@ -25,7 +27,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-[35px] max-sm:gap-[12px]">
                     <div className="flex items-center">
-                        <button tabIndex={0} className="border-none bg-transparent text-[10px] text-[#626262] font-normal 2xl:text-[14px] cursor-pointer">Login</button>
+                       <Link to="/login"> <button tabIndex={0} className="border-none bg-transparent text-[10px] text-[#626262] font-normal 2xl:text-[14px] cursor-pointer">Login</button></Link>
                     </div>
                     <div className="flex items-center gap-[14px]">
                         <button tabIndex={0} className="border-none bg-transparent text-[10px] text-[#626262] font-normal max-sm:hidden 2xl:text-[14px] cursor-pointer">Follow US</button>

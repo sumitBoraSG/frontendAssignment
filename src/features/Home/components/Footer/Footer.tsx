@@ -1,6 +1,21 @@
+import { useState } from 'react'
 import footerBackground from '@/assets/images/footerBackground.png'
 
 const Footer = ({contactRef}) => {
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setForm(prev => ({ ...prev, [name]: value}));
+    }
+    const handleSubmit = () => {
+        console.log(form);
+        console.log("the Form has been submitted successfully");
+    }
     return (
         <div ref={contactRef}
          className='w-full'>
@@ -12,9 +27,9 @@ const Footer = ({contactRef}) => {
                 <p className='font-workSans font-[400] text-[18px] text-[#FFFFFF80] max-md:text-center'>Get news about articles and updates <br/> in your inbox.</p>
             </div>
             <div className='flex flex-col gap-[40px] pt-[87px] max-md:w-full max-md:pt-[48px] max-md:gap-[30px]'>
-                <input className='block w-[550px]  border-b border-white text-white max-lg:w-[400px] max-md:w-full' type="text" placeholder='NAME'/>
-                <input className='block w-[550px]  border-b border-white text-white max-lg:w-[400px] max-md:w-full' type="email" placeholder='EMAIL'/>
-                <input className='block w-[550px]  border-b border-white text-white max-lg:w-[400px] max-md:w-full' type="text" placeholder='MESSAGE'/>
+                <input name='name' onChange={handleChange} className='block w-[550px]  border-b border-white text-white focus:outline-none focus:ring-0 max-lg:w-[400px] max-md:w-full' type="text" placeholder='NAME'/>
+                <input name='email' onChange={handleChange} className='block w-[550px]  border-b border-white text-white focus:outline-none focus:ring-0 max-lg:w-[400px] max-md:w-full' type="email" placeholder='EMAIL'/>
+                <input name='message' onChange={handleChange} className='block w-[550px]  border-b border-white text-white focus:outline-none focus:ring-0 max-lg:w-[400px] max-md:w-full' type="text" placeholder='MESSAGE'/>
             </div>
             
         </div>
@@ -27,7 +42,7 @@ const Footer = ({contactRef}) => {
                 IN TOUCH
             </h1>
             <div className='absolute h-[180px] w-[180px] flex items-center justify-center rounded-full top-[20px] right-0 border-1 border-[#F07E15] max-md:h-[100px] max-md:w-[100px]'>
-                <p className='font-workSans font-[400] text-[26px] text-[#F07E15] max-md:text-[18px]'>SEND</p>
+                <p onClick={handleSubmit} className='font-workSans font-[400] text-[26px] text-[#F07E15] max-md:text-[18px]'>SEND</p>
             </div>
         </div>
             </div>

@@ -1,9 +1,10 @@
 import personPhoto from '@/assets/images/card1Photo.png'
 import viewCard from '@/assets/images/viewCard.svg'
-const ProductCard = ({title, price, image, description}) => {
-    console.log(title, description, price);
+import { Link } from "react-router-dom";
+
+const ProductCard = ({id, title, price, image, description}) => {
     return (
-        <div className="w-[310px] shrink-0">
+        <Link to={`/product/${id}`} className="w-[310px] shrink-0 block cursor-pointer">
             <div className="w-full relative">
                 <img className='h-[322px] w-full' src={image} alt="" />
                 <img className='absolute bottom-[0%] right-[-5%] h-[45px] w-[45px]' src={viewCard} alt="" />
@@ -17,7 +18,9 @@ const ProductCard = ({title, price, image, description}) => {
                 </div>
                 <p className='font-syne font-[600] text-[26px]'>$ {price}</p>
             </div>
-        </div>
+
+        </Link>
+        
     )
 }
 export default ProductCard;
