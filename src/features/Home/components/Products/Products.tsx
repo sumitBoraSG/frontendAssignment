@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import ProductHeader from "./components/ProductHeader/index.ts";
 import ProductMain from "./components/ProductMain/ProductMain.tsx";
-const Products = () => {
+const Products = ({productRef}) => {
     const scrollRef = useRef<HTMLDivElement>(null);
-
     const scrollLeft = () => {
         console.log("left");
         scrollRef.current?.scrollBy({
@@ -20,7 +19,7 @@ const Products = () => {
     };
     return (
         <>
-            <ProductHeader scrollLeft={scrollLeft} scrollRight={scrollRight} />
+            <ProductHeader productRef={productRef}  scrollLeft={scrollLeft} scrollRight={scrollRight} />
             <ProductMain scrollRef={scrollRef} scrollLeft={scrollLeft} scrollRight={scrollRight} />
         </>
     )

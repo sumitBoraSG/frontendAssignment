@@ -3,8 +3,7 @@ import ProductCard from "./components/ProductCard";
 import arrowLeft from '@/assets/images/arrowLeft.svg';
 import arrowRight from '@/assets/images/arrowRight.svg';
 import { products } from "@/data/productList";
-const ProductMain = ({scrollRef, scrollLeft, scrollRight}) => {
-    console.log(scrollLeft)
+const ProductMain = ({scrollRef, scrollLeft, scrollRight, productRef}) => {
     return (
         <div className="w-full flex pb-[105px] max-md:flex-col max-md:pb-[10px] ">
             <div className="w-[20%] max-md:w-[100%] max-md:pl-[5.25%]">

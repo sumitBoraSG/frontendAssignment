@@ -1,8 +1,9 @@
 import footerBackground from '@/assets/images/footerBackground.png'
 
-const Footer = () => {
+const Footer = ({contactRef}) => {
     return (
-        <div className='w-full'>
+        <div ref={contactRef}
+         className='w-full'>
             <div className='w-full flex justify-center' style={{ backgroundImage: `url(${footerBackground})` }}>
             <div className='w-[89.5%]'>
                 <div className="w-full flex justify-between max-md:flex-col max-md:items-center">
