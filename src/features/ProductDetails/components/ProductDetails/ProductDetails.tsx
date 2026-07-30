@@ -19,7 +19,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="bg-[#FAFAFA]">
       <div className="max-w-[1700px] mx-auto px-5 sm:px-8 lg:px-14 pt-6">
         <button
           onClick={() => navigate(-1)}
@@ -42,7 +42,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="flex flex-col justify-center">
-            <h1 className="font-syne text-4xl sm:text-5xl xl:text-6xl font-bold mt-3">
+            <h1 className="font-syne text-2xl sm:text-5xl xl:text-6xl font-bold mt-3">
               {product.title}
             </h1>
 
@@ -70,13 +70,12 @@ const ProductDetails = () => {
             <p className="mt-8 text-gray-600 leading-8 max-w-xl">
               {product.description}
               <br />
-              <br />
               Crafted with premium materials for maximum comfort and
               durability. Designed with a clean, modern aesthetic that
               complements everyday wear.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-5">
               <h3 className="font-semibold mb-4">Size</h3>
 
               <div className="flex flex-wrap gap-3">
@@ -113,7 +112,7 @@ const ProductDetails = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 mt-14 border-t pt-8">
+            <div className="grid grid-cols-3 gap-6 mt-14 border-t pt-8 mb-30">
 
               <div>
                 <p className="font-semibold">Free Delivery</p>

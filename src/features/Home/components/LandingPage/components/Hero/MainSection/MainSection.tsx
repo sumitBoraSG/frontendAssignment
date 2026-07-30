@@ -27,7 +27,7 @@ const MainSection = () => {
             <div className="w-full flex justify-center h-[125px] max-sm:h-[110px]">
                 <div className="w-[89.5%] relative font-extrabold text-white pt-[1px]">
                     <div className="inline-block relative z-[100] font-workSans font-normal text-[19px] border-b border-white mt-[29px]">
-                        <p className='leading-[1.2] font-workSans font-400 flex gap-2.5 max-sm:mt-[18px]'><p>See more</p> <img src={topRightArrow} alt=""/></p>
+                        <p className='leading-[1.2] font-workSans font-400 flex gap-2.5 max-sm:mt-[18px]'>See more <img src={topRightArrow} alt=""/></p>
                     </div>
                 </div>
             </div>
