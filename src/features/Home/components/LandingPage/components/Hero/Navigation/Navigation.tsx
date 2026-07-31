@@ -1,10 +1,20 @@
+import {useState} from "react";
 import menuIcon from "@/assets/images/menu.svg";
 import starIcon from "@/assets/images/star.svg";
 import crossIcon from "@/assets/images/cross.svg"
 
 const Navigation = ({menuFlag, setMenuFlag, scrollToContact, scrollToProducts}) => {
+    const [starPosition, setStarPosition] = useState("0px");
     const handleMenuToggle = () => {
         setMenuFlag(prev => !prev);
+    }
+    const handleStarPostion = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        if(window.innerWidth <= 1024) {
+            setStarPosition(`${rect.left - 39}px`);
+        }else {
+            setStarPosition(`${rect.left - 54}px`);
+        }
     }
     return (
         <div className="w-full relative">
@@ -17,7 +27,7 @@ const Navigation = ({menuFlag, setMenuFlag, scrollToContact, scrollToProducts}) 
                     <img onClick={handleMenuToggle} tabIndex={0} className="h-[24px] w-[24px] mt-[2.5px] sm:hidden" src={menuFlag ? menuIcon : crossIcon} alt="menu button"/>
 
                 </div>
-                <img className="absolute w-[23px] h-[22px] bottom-[-12px] left-[27.3%] max-sm:hidden"  src={starIcon} alt="small star icon"/>
+                <img className="absolute w-[23px] h-[22px] bottom-[-12px] max-sm:hidden" style={{left: starPosition}}  src={starIcon} alt="small star icon"/>
 
             </div>
             {/* <div className="w-[89.5%] flex">
@@ -27,10 +37,10 @@ const Navigation = ({menuFlag, setMenuFlag, scrollToContact, scrollToProducts}) 
         <div className="h-[43px] w-full flex justify-center max-sm:hidden">
             <div className="w-[89.5%] flex">
                 <div className="w-[55%] flex justify-between items-end max-lg:w-[80%]">
-                    <button className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">HOME</button>
-                    <button className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">ABOUT</button>
+                    <button onMouseEnter={handleStarPostion} className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">HOME</button>
+                    <button onMouseEnter={handleStarPostion} className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">ABOUT</button>
                     <div className="group relative">
-                        <button onClick={scrollToProducts} className="font-workSans text-[18px] font-normal text-white bg-transparent border-0 border-b border-transparent group-hover:border-white max-lg:text-[13px]">OUR PRODUCTS</button>
+                        <button onMouseEnter={handleStarPostion} onClick={scrollToProducts} className="font-workSans text-[18px] font-normal text-white bg-transparent border-0 border-b border-transparent group-hover:border-white max-lg:text-[13px]">OUR PRODUCTS</button>
 
                         <ul className="absolute z-[999] hidden list-none pt-2 text-sm text-[#FFFFFF] font-light font-workSans group-hover:block">
                             <li className="py-[2px]">
@@ -47,7 +57,7 @@ const Navigation = ({menuFlag, setMenuFlag, scrollToContact, scrollToProducts}) 
                             </li>
                         </ul>
                     </div>
-                    <button onClick={scrollToContact} className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">CONTACT US</button>
+                    <button onMouseEnter={handleStarPostion} onClick={scrollToContact} className="font-workSans font-normal text-[18px] text-white bg-transparent border-b border-transparent hover:border-white max-lg:text-[13px]">CONTACT US</button>
                 </div>
             </div>
         </div>

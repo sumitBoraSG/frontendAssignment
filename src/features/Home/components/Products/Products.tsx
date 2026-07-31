@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import ProductHeader from "./components/ProductHeader/index.ts";
 import ProductMain from "./components/ProductMain/ProductMain.tsx";
 const Products = ({productRef}) => {
+    const [starPosition, setStarPosition] = useState("0px");
+
     const scrollRef = useRef<HTMLDivElement>(null);
     const scrollLeft = () => {
         console.log("left");
@@ -19,8 +21,8 @@ const Products = ({productRef}) => {
     };
     return (
         <>
-            <ProductHeader productRef={productRef}  scrollLeft={scrollLeft} scrollRight={scrollRight} />
-            <ProductMain scrollRef={scrollRef} scrollLeft={scrollLeft} scrollRight={scrollRight} />
+            <ProductHeader starPosition={starPosition} productRef={productRef}  scrollLeft={scrollLeft} scrollRight={scrollRight} />
+            <ProductMain setStarPosition={setStarPosition}  scrollRef={scrollRef} scrollLeft={scrollLeft} scrollRight={scrollRight} />
         </>
     )
 }
